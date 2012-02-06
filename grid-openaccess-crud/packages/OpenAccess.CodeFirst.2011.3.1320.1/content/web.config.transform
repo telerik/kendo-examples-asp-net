@@ -1,0 +1,9 @@
+﻿<configuration>
+  <system.web>
+    <compilation>
+      <assemblies>
+        <add assembly="Telerik.OpenAccess, Version=2011.2.713.3, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342" />
+      </assemblies>
+    </compilation>
+   </system.web>
+</configuration>

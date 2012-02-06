@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entityDiagramsDiagram dslVersion="2.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Northwind">
+  <DomainModelMoniker name="/NorthwindContext" />
+  <nestedChildShapes>
+    <classShape Id="1d40e791-8ad6-4451-b78a-a11e683d5dce" absoluteBounds="4, 4, 1.5, 3.3011832682291651" fillColor="253, 184, 119" outlineColor="213, 71, 0">
+      <DomainClassMoniker name="/NorthwindContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77c714c3-2227-4db5-b2f0-5f14dbb4aa66" absoluteBounds="4.015, 4.51, 1.4700000000000002, 2.172403971354167" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="8f472aed-0822-41f9-9fe3-2cca0eebf26a" absoluteBounds="4.015, 6.6924039713541674, 1.4700000000000002, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="2f6363dc-b5cd-4d9a-981d-50702ad2cdb7" absoluteBounds="4.015, 6.9517936197916654, 1.4700000000000002, 0.2493896484375" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</entityDiagramsDiagram>

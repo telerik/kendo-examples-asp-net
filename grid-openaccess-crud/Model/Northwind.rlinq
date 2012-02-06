@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="NorthwindContext" namespace="OpenAccessKendoService" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="NorthwindContext" backend="mssql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="OpenAccessKendoService" default="true">
+      <orm:class name="Product" behavior="readwrite" uniqueId="7e3db177-98df-4762-bc63-f263c5e2d252">
+        <orm:table name="Products" />
+        <orm:identity>
+          <orm:key-generator name="autoinc" />
+          <orm:single-field field-name="_productID" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_productID" property="ProductID" behavior="readwrite" uniqueId="a857009c-f1ec-4b18-b287-6679c0439522" type="System.Int32">
+          <orm:column name="ProductID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_productName" property="ProductName" behavior="readwrite" uniqueId="c84a7327-6fd6-4e22-8da8-02c92673c472" type="System.String">
+          <orm:column name="ProductName" sql-type="nvarchar" nullable="false" length="40" scale="0" ado-type="Varchar" />
+        </orm:field>
+        <orm:field name="_quantityPerUnit" property="QuantityPerUnit" behavior="readwrite" uniqueId="d8b10c3e-c76e-431c-a19e-9a1c3282052f" type="System.String">
+          <orm:column name="QuantityPerUnit" sql-type="nvarchar" nullable="true" length="20" scale="0" ado-type="Varchar" />
+        </orm:field>
+        <orm:field name="_unitPrice" property="UnitPrice" behavior="readwrite" uniqueId="c7638dad-0116-4da6-b2e0-586b10344ff4" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UnitPrice" sql-type="decimal" nullable="true" length="5" scale="2" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="_unitsInStock" property="UnitsInStock" behavior="readwrite" uniqueId="24ce5c0c-ce71-40ad-903c-3f73aa876f8d" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UnitsInStock" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_unitsOnOrder" property="UnitsOnOrder" behavior="readwrite" uniqueId="872b078d-9735-43d6-a9d6-e14c0e24e342" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UnitsOnOrder" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_reorderLevel" property="ReorderLevel" behavior="readwrite" uniqueId="72a4a1ad-0323-4ae9-88db-731fa5291f0c" type="System.Nullable`1[[System.Int16, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ReorderLevel" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        </orm:field>
+        <orm:field name="_discontinued" property="Discontinued" behavior="readwrite" uniqueId="ae400260-79a3-4979-a4d7-702e0e56c383" type="System.Boolean">
+          <orm:column name="Discontinued" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:index name="ProductName">
+          <orm:column name="ProductName" sql-type="nvarchar" nullable="false" length="40" scale="0" ado-type="Varchar" />
+        </orm:index>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="Territories">
+        <orm:column name="TerritoryID" sql-type="nvarchar" nullable="false" length="20" scale="0" primary-key="true" ado-type="Varchar" />
+        <orm:column name="TerritoryDescription" sql-type="nchar" nullable="false" length="50" scale="0" ado-type="Character" />
+        <orm:column name="RegionID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:constraint name="FK_Territories_Region" destination-table="Region">
+          <orm:column name="RegionID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="Suppliers">
+        <orm:column name="SupplierID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="CompanyName" sql-type="nvarchar" nullable="false" length="40" scale="0" ado-type="Varchar" />
+        <orm:column name="ContactName" sql-type="nvarchar" nullable="true" length="30" scale="0" ado-type="Varchar" />
+        <orm:column name="ContactTitle" sql-type="nvarchar" nullable="true" length="30" scale="0" ado-type="Varchar" />
+        <orm:column name="Address" sql-type="nvarchar" nullable="true" length="60" scale="0" ado-type="Varchar" />
+        <orm:column name="City" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        <orm:column name="Region" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        <orm:column name="PostalCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="Varchar" />
+        <orm:column name="Country" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        <orm:column name="Phone" sql-type="nvarchar" nullable="true" length="24" scale="0" ado-type="Varchar" />
+        <orm:column name="Fax" sql-type="nvarchar" nullable="true" length="24" scale="0" ado-type="Varchar" />
+        <orm:column name="HomePage" sql-type="ntext" nullable="true" length="0" scale="0" ado-type="Clob" />
+        <orm:index name="CompanyName">
+          <orm:column name="CompanyName" sql-type="nvarchar" nullable="false" length="40" scale="0" ado-type="Varchar" />
+        </orm:index>
+        <orm:index name="PostalCode">
+          <orm:column name="PostalCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="Varchar" />
+        </orm:index>
+      </orm:table>
+      <orm:table name="Shippers">
+        <orm:column name="ShipperID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="CompanyName" sql-type="nvarchar" nullable="false" length="40" scale="0" ado-type="Varchar" />
+        <orm:column name="Phone" sql-type="nvarchar" nullable="true" length="24" scale="0" ado-type="Varchar" />
+      </orm:table>
+      <orm:table name="Region">
+        <orm:column name="RegionID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="RegionDescription" sql-type="nchar" nullable="false" length="50" scale="0" ado-type="Character" />
+      </orm:table>
+      <orm:table name="Products">
+        <orm:column name="ProductID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="ProductName" sql-type="nvarchar" nullable="false" length="40" scale="0" ado-type="Varchar" />
+        <orm:column name="QuantityPerUnit" sql-type="nvarchar" nullable="true" length="20" scale="0" ado-type="Varchar" />
+        <orm:column name="UnitPrice" sql-type="decimal" nullable="true" length="5" scale="2" ado-type="Decimal" />
+        <orm:column name="UnitsInStock" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="UnitsOnOrder" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="ReorderLevel" sql-type="smallint" nullable="true" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="Discontinued" sql-type="bit" nullable="false" length="0" scale="0" ado-type="Bit" />
+        <orm:index name="ProductName">
+          <orm:column name="ProductName" sql-type="nvarchar" nullable="false" length="40" scale="0" ado-type="Varchar" />
+        </orm:index>
+      </orm:table>
+      <orm:table name="Orders">
+        <orm:column name="OrderID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="CustomerID" sql-type="nchar" nullable="true" length="5" scale="0" ado-type="Character" />
+        <orm:column name="EmployeeID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="OrderDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="RequiredDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ShippedDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ShipVia" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Freight" sql-type="money" nullable="true" length="0" scale="0" ado-type="Decimal" />
+        <orm:column name="ShipName" sql-type="nvarchar" nullable="true" length="40" scale="0" ado-type="Varchar" />
+        <orm:column name="ShipAddress" sql-type="nvarchar" nullable="true" length="60" scale="0" ado-type="Varchar" />
+        <orm:column name="ShipCity" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        <orm:column name="ShipRegion" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        <orm:column name="ShipPostalCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="Varchar" />
+        <orm:column name="ShipCountry" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        <orm:index name="CustomerID">
+          <orm:column name="CustomerID" sql-type="nchar" nullable="true" length="5" scale="0" ado-type="Character" />
+        </orm:index>
+        <orm:index name="CustomersOrders">
+          <orm:column name="CustomerID" sql-type="nchar" nullable="true" length="5" scale="0" ado-type="Character" />
+        </orm:index>
+        <orm:index name="EmployeeID">
+          <orm:column name="EmployeeID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:index>
+        <orm:index name="EmployeesOrders">
+          <orm:column name="EmployeeID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:index>
+        <orm:index name="OrderDate">
+          <orm:column name="OrderDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:index>
+        <orm:index name="ShippedDate">
+          <orm:column name="ShippedDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:index>
+        <orm:index name="ShippersOrders">
+          <orm:column name="ShipVia" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:index>
+        <orm:index name="ShipPostalCode">
+          <orm:column name="ShipPostalCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="Varchar" />
+        </orm:index>
+        <orm:constraint name="FK_Orders_Customers" destination-table="Customers">
+          <orm:column name="CustomerID" sql-type="nchar" nullable="true" length="5" scale="0" ado-type="Character" />
+        </orm:constraint>
+        <orm:constraint name="FK_Orders_Employees" destination-table="Employees">
+          <orm:column name="EmployeeID" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+        <orm:constraint name="FK_Orders_Shippers" destination-table="Shippers">
+          <orm:column name="ShipVia" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="Order Details">
+        <orm:column name="OrderID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="ProductID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="UnitPrice" sql-type="money" nullable="false" length="0" scale="0" ado-type="Decimal" />
+        <orm:column name="Quantity" sql-type="smallint" nullable="false" length="0" scale="0" ado-type="Int16" />
+        <orm:column name="Discount" sql-type="real" nullable="false" length="0" scale="0" ado-type="Real" />
+        <orm:index name="OrderID">
+          <orm:column name="OrderID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:index>
+        <orm:index name="OrdersOrder_Details">
+          <orm:column name="OrderID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:index>
+        <orm:index name="ProductID">
+          <orm:column name="ProductID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:index>
+        <orm:index name="ProductsOrder_Details">
+          <orm:column name="ProductID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:index>
+        <orm:constraint name="FK_Order_Details_Orders" destination-table="Orders">
+          <orm:column name="OrderID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+        <orm:constraint name="FK_Order_Details_Products" destination-table="Products">
+          <orm:column name="ProductID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="EmployeeTerritories">
+        <orm:column name="EmployeeID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="TerritoryID" sql-type="nvarchar" nullable="false" length="20" scale="0" primary-key="true" ado-type="Varchar" />
+        <orm:constraint name="FK_EmployeeTerritories_Employees" destination-table="Employees">
+          <orm:column name="EmployeeID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:constraint>
+        <orm:constraint name="FK_EmployeeTerritories_Territories" destination-table="Territories">
+          <orm:column name="TerritoryID" sql-type="nvarchar" nullable="false" length="20" scale="0" primary-key="true" ado-type="Varchar" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="Employees">
+        <orm:column name="EmployeeID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="LastName" sql-type="nvarchar" nullable="false" length="20" scale="0" ado-type="Varchar" />
+        <orm:column name="FirstName" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="Varchar" />
+        <orm:column name="Title" sql-type="nvarchar" nullable="true" length="30" scale="0" ado-type="Varchar" />
+        <orm:column name="TitleOfCourtesy" sql-type="nvarchar" nullable="true" length="25" scale="0" ado-type="Varchar" />
+        <orm:column name="BirthDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="HireDate" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Address" sql-type="nvarchar" nullable="true" length="60" scale="0" ado-type="Varchar" />
+        <orm:column name="City" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        <orm:column name="Region" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        <orm:column name="PostalCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="Varchar" />
+        <orm:column name="Country" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        <orm:column name="HomePhone" sql-type="nvarchar" nullable="true" length="24" scale="0" ado-type="Varchar" />
+        <orm:column name="Extension" sql-type="nvarchar" nullable="true" length="4" scale="0" ado-type="Varchar" />
+        <orm:column name="Photo" sql-type="image" nullable="true" length="0" scale="0" ado-type="LongVarBinary" />
+        <orm:column name="Notes" sql-type="ntext" nullable="true" length="0" scale="0" ado-type="Clob" />
+        <orm:column name="ReportsTo" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="PhotoPath" sql-type="nvarchar" nullable="true" length="255" scale="0" ado-type="Varchar" />
+        <orm:index name="LastName">
+          <orm:column name="LastName" sql-type="nvarchar" nullable="false" length="20" scale="0" ado-type="Varchar" />
+        </orm:index>
+        <orm:index name="PostalCode">
+          <orm:column name="PostalCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="Varchar" />
+        </orm:index>
+        <orm:constraint name="FK_Employees_Employees" destination-table="Employees">
+          <orm:column name="ReportsTo" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="Customers">
+        <orm:column name="CustomerID" sql-type="nchar" nullable="false" length="5" scale="0" primary-key="true" ado-type="Character" />
+        <orm:column name="CompanyName" sql-type="nvarchar" nullable="false" length="40" scale="0" ado-type="Varchar" />
+        <orm:column name="ContactName" sql-type="nvarchar" nullable="true" length="30" scale="0" ado-type="Varchar" />
+        <orm:column name="ContactTitle" sql-type="nvarchar" nullable="true" length="30" scale="0" ado-type="Varchar" />
+        <orm:column name="Address" sql-type="nvarchar" nullable="true" length="60" scale="0" ado-type="Varchar" />
+        <orm:column name="City" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        <orm:column name="Region" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        <orm:column name="PostalCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="Varchar" />
+        <orm:column name="Country" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        <orm:column name="Phone" sql-type="nvarchar" nullable="true" length="24" scale="0" ado-type="Varchar" />
+        <orm:column name="Fax" sql-type="nvarchar" nullable="true" length="24" scale="0" ado-type="Varchar" />
+        <orm:index name="City">
+          <orm:column name="City" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        </orm:index>
+        <orm:index name="CompanyName">
+          <orm:column name="CompanyName" sql-type="nvarchar" nullable="false" length="40" scale="0" ado-type="Varchar" />
+        </orm:index>
+        <orm:index name="PostalCode">
+          <orm:column name="PostalCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="Varchar" />
+        </orm:index>
+        <orm:index name="Region">
+          <orm:column name="Region" sql-type="nvarchar" nullable="true" length="15" scale="0" ado-type="Varchar" />
+        </orm:index>
+      </orm:table>
+      <orm:table name="CustomerDemographics">
+        <orm:column name="CustomerTypeID" sql-type="nchar" nullable="false" length="10" scale="0" primary-key="true" ado-type="Character" />
+        <orm:column name="CustomerDesc" sql-type="ntext" nullable="true" length="0" scale="0" ado-type="Clob" />
+      </orm:table>
+      <orm:table name="CustomerCustomerDemo">
+        <orm:column name="CustomerID" sql-type="nchar" nullable="false" length="5" scale="0" primary-key="true" ado-type="Character" />
+        <orm:column name="CustomerTypeID" sql-type="nchar" nullable="false" length="10" scale="0" primary-key="true" ado-type="Character" />
+        <orm:constraint name="FK_CustomerCustomerDemo" destination-table="CustomerDemographics">
+          <orm:column name="CustomerTypeID" sql-type="nchar" nullable="false" length="10" scale="0" primary-key="true" ado-type="Character" />
+        </orm:constraint>
+        <orm:constraint name="FK_CustomerCustomerDemo_Customers" destination-table="Customers">
+          <orm:column name="CustomerID" sql-type="nchar" nullable="false" length="5" scale="0" primary-key="true" ado-type="Character" />
+        </orm:constraint>
+      </orm:table>
+      <orm:table name="Categories">
+        <orm:column name="CategoryID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="CategoryName" sql-type="nvarchar" nullable="false" length="15" scale="0" ado-type="Varchar" />
+        <orm:column name="Description" sql-type="ntext" nullable="true" length="0" scale="0" ado-type="Clob" />
+        <orm:column name="Picture" sql-type="image" nullable="true" length="0" scale="0" ado-type="LongVarBinary" />
+        <orm:index name="CategoryName">
+          <orm:column name="CategoryName" sql-type="nvarchar" nullable="false" length="15" scale="0" ado-type="Varchar" />
+        </orm:index>
+      </orm:table>
+    </orm:schema>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>NorthwindConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>data source=.\SQLEXPRESS;attachdbfilename=|DataDirectory|\Northwind.mdf;integrated security=True</AppConfigConnectionString>
+    <InitialCatalog>Northwind</InitialCatalog>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+      <GenerateMultipleFiles>false</GenerateMultipleFiles>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>mssql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="7e3db177-98df-4762-bc63-f263c5e2d252" name="Product" namespace="OpenAccessKendoService" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="a857009c-f1ec-4b18-b287-6679c0439522" name="ProductID" type="Int32" label="ProductID : Int32" kind="Persistent" identity="true" fieldName="_productID" />
+      <Property Id="da304c31-9853-4f85-bc0e-66481aa57ba5" name="CategoryID" type="Int32" label="CategoryID : Int32" nullable="true" kind="Persistent" fieldName="_categoryID" />
+      <Property Id="ae400260-79a3-4979-a4d7-702e0e56c383" name="Discontinued" type="Boolean" label="Discontinued : Boolean" kind="Persistent" fieldName="_discontinued" />
+      <Property Id="c84a7327-6fd6-4e22-8da8-02c92673c472" name="ProductName" label="ProductName : String" kind="Persistent" fieldName="_productName" />
+      <Property Id="d8b10c3e-c76e-431c-a19e-9a1c3282052f" name="QuantityPerUnit" label="QuantityPerUnit : String" kind="Persistent" fieldName="_quantityPerUnit" />
+      <Property Id="72a4a1ad-0323-4ae9-88db-731fa5291f0c" name="ReorderLevel" type="Int16" label="ReorderLevel : Int16" nullable="true" kind="Persistent" fieldName="_reorderLevel" />
+      <Property Id="5e028fb6-aada-4e13-9d07-7640ccd35232" name="SupplierID" type="Int32" label="SupplierID : Int32" nullable="true" kind="Persistent" fieldName="_supplierID" />
+      <Property Id="c7638dad-0116-4da6-b2e0-586b10344ff4" name="UnitPrice" type="Decimal" label="UnitPrice : Decimal" nullable="true" kind="Persistent" fieldName="_unitPrice" />
+      <Property Id="24ce5c0c-ce71-40ad-903c-3f73aa876f8d" name="UnitsInStock" type="Int16" label="UnitsInStock : Int16" nullable="true" kind="Persistent" fieldName="_unitsInStock" />
+      <Property Id="872b078d-9735-43d6-a9d6-e14c0e24e342" name="UnitsOnOrder" type="Int16" label="UnitsOnOrder : Int16" nullable="true" kind="Persistent" fieldName="_unitsOnOrder" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="2ca5b7d4-ec91-4a2f-a5c3-ec9471e7b6af">
+      <domainContainer name="NorthwindContext" namespace="OpenAccessKendoService" showPropertiesCompartment="true">
+        <entitySetProperty name="Products" namespace="OpenAccessKendoService" type="Product" label="Products : IQueryable&lt;OpenAccessKendoService.Product&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>
