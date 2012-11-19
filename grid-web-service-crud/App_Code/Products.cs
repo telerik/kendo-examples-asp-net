@@ -65,11 +65,12 @@ public class Products : System.Web.Services.WebService
     /// </summary>
     /// <returns>All available products</returns>
     [WebMethod]
-    public IEnumerable<ProductViewModel> Read() 
+    public DataSourceResult Read(int take, int skip, IEnumerable<Sort> sort, Filter filter) 
     {
         using (var northwind = new Northwind())
         {
             return northwind.Products
+                .OrderBy(p => p.ProductID) // EF requires oredered IQueryable to do paging
                 // Use a view model to avoid serializing internal Entity Framework properties as JSON
                 .Select(p => new ProductViewModel
                 {
@@ -79,7 +80,7 @@ public class Products : System.Web.Services.WebService
                     UnitsInStock = p.UnitsInStock,
                     Discontinued = p.Discontinued
                 })
-                .ToList();
+                .ToDataSourceResult(take, skip, sort, filter);
         }
     }
 
