@@ -3,10 +3,13 @@ using System.Data;
 using System.Linq;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
-using System.Web.Services;
+using System.ServiceModel.Web;
 using NorthwindModel;
+using System.Runtime.Serialization;
+using System.IO;
 
 [ServiceContract(Namespace = "")]
+[ServiceBehavior(IncludeExceptionDetailInFaults = true)] 
 [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
 public class Products
 {
@@ -63,11 +66,14 @@ public class Products
     /// </summary>
     /// <returns>All available products</returns>
     [OperationContract]
-    public IEnumerable<ProductViewModel> Read()
+    [WebInvoke( ResponseFormat = WebMessageFormat.Json,
+                  RequestFormat = WebMessageFormat.Json)]    
+    public DataSourceResult Read(int skip, int take, IEnumerable<Sort> sort, Filter filter)
     {
         using (var northwind = new Northwind())
         {
             return northwind.Products
+                .OrderBy(p => p.ProductID) //EF requires sorted IQueryable in order to do paging
                 // Use a view model to avoid serializing internal Entity Framework properties as JSON
                 .Select(p => new ProductViewModel
                 {
@@ -77,7 +83,7 @@ public class Products
                     UnitsInStock = p.UnitsInStock,
                     Discontinued = p.Discontinued
                 })
-                .ToList();
+                .ToDataSourceResult(take, skip, sort, filter);
         }
     }
 

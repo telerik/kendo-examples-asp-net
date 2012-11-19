@@ -1,6 +1,8 @@
 ﻿/// <summary>
 /// This class is used for JSON serialization and deserialization. It is mapped to and from the Product entity class
 /// </summary>
+using System.Runtime.Serialization;
+[KnownType(typeof(ProductViewModel))]
 public class ProductViewModel
 {
     public int? ProductID { get; set; }
