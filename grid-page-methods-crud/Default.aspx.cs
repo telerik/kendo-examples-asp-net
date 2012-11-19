@@ -59,11 +59,12 @@ public partial class _Default : System.Web.UI.Page
     /// </summary>
     /// <returns>All available products</returns>
     [WebMethod]
-    public static IEnumerable<ProductViewModel> Products()
+    public static DataSourceResult Products(int take, int skip, IEnumerable<Sort> sort, Filter filter)
     {
         using (var northwind = new Northwind())
         {
             return northwind.Products
+                .OrderBy(p => p.ProductID) // EF requires ordering for paging
                 // Use a view model to avoid serializing internal Entity Framework properties as JSON
                 .Select(p => new ProductViewModel
                 {
@@ -73,7 +74,7 @@ public partial class _Default : System.Web.UI.Page
                     UnitsInStock = p.UnitsInStock,
                     Discontinued = p.Discontinued
                 })
-                .ToList();
+             .ToDataSourceResult(take, skip, sort, filter);
         }
     }
 

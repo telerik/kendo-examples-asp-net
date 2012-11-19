@@ -3,11 +3,12 @@
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
     <%-- kendo.common.min.css contains common CSS rules used by all Kendo themes --%>
-    <link href="http://cdn.kendostatic.com/2011.3.1129/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="http://cdn.kendostatic.com/2012.3.1114/styles/kendo.common.min.css" rel="stylesheet" />
+
     <%-- kendo.blueopal.min.css contains the "Blue Opal" Kendo theme --%>
-    <link href="http://cdn.kendostatic.com/2011.3.1129/styles/kendo.blueopal.min.css"
-        rel="stylesheet" />
-    <script src="http://cdn.kendostatic.com/2011.3.1129/js/kendo.all.min.js"></script>
+    <link href="http://cdn.kendostatic.com/2012.3.1114/styles/kendo.default.min.css" rel="stylesheet" />
+
+    <script src="http://cdn.kendostatic.com/2012.3.1114/js/kendo.all.min.js"></script>
 </asp:Content>
 
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
@@ -19,7 +20,7 @@
     <script>
         $(function () {
             $("#grid").kendoGrid({
-                height: 200,
+                height: 400,
                 columns: [
                     "ProductName",
                     { field: "UnitPrice", format: "{0:c}", width: "150px" },
@@ -27,16 +28,26 @@
                     { field: "Discontinued", width: "100px" },
                     { command: "destroy", title: "Delete", width: "110px" }
                 ],
+                pageable: {
+                    info: true
+                }, // enable paging
+                filterable: true, // enable filtering
+                sortable: true, // enable sorting
                 editable: true, // enable editing
                 toolbar: ["create", "save", "cancel"], // specify toolbar commands
                 dataSource: {
+                    serverPaging: true,
+                    serverSorting: true,
+                    serverFiltering: true,
+                    pageSize: 10,
                     schema: {
-                        data: "d", // web methods return JSON in the following format { "d": <result> }. Specify how to get the result.
+                        data: "d.Data", // web methods return JSON in the following format { "d": <result> }. Specify how to get the result.
+                        total: "d.Total",
                         model: { // define the model of the data source. Required for validation and property types.
                             id: "ProductID",
                             fields: {
-                                ProductID: { editable: false, nullable: true },
-                                ProductName: { validation: { required: true } },
+                                ProductID: { editable: false, nullable: true, },
+                                ProductName: { validation: { required: true }, type: "string" },
                                 UnitPrice: { type: "number", validation: { required: true, min: 1 } },
                                 Discontinued: { type: "boolean" },
                                 UnitsInStock: { type: "number", validation: { min: 0, required: true } }
@@ -66,8 +77,14 @@
                             type: "POST" //use HTTP POST request as the default GET is not allowed for web methods
                         },
                         parameterMap: function(data, operation) {
-                            if (operation !== "read" && data.models) {                                
+                            if (data.models) {
                                 return JSON.stringify({ products: data.models });                                
+                            } else if (operation == "read") {
+                                //Page methods always need values for their parameters
+
+                                data = $.extend({ sort: null, filter: null }, data);
+
+                                return JSON.stringify(data);
                             }
                         }
                     }
