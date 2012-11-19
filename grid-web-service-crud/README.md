@@ -1,4 +1,4 @@
-#CRUD operations with ASP.NET Page Methods
+#CRUD operations with ASP.NET Web Services
 
 This is a sample web site which shows how to use ASP.NET Web Services and Dynamic Linq to implement
 [CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete) with Kendo UI Grid.
