@@ -66,7 +66,7 @@
                                 return "api/products/" + product.ProductID;
                             },
                             contentType: "application/json",
-                            type: "POST"
+                            type: "PUT"
                         },
                         destroy: {
                             url: function (product) {
