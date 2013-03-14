@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.WebPages.Administration</name>
+  </assembly>
+  <members>
+    <member name="T:System.Web.WebPages.Administration.Default_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Default_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.Default_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Default_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Default_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.EnableInstructions_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.EnableInstructions_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.EnableInstructions_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.EnableInstructions_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.EnableInstructions_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.Layout_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Layout_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.Layout_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Layout_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Layout_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.Login_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Login_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.Login_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Login_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Login_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.Logout_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Logout_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.Logout_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Logout_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Logout_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.pagestart_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.pagestart_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.pagestart_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.pagestart_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.pagestart_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PreApplicationStartCode">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PreApplicationStartCode.Start">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.Register_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Register_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.Register_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Register_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.Register_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.SiteAdmin">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.SiteAdmin.AdminVirtualPath">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.SiteAdmin.Description">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.SiteAdmin.DisplayName">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.SiteAdmin.GetVirtualPath(System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.SiteAdmin.Modules">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.SiteAdmin.Register(System.String,System.String,System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.SiteAdmin.StartPageVirtualPath">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.IPackagesSourceFile">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.IPackagesSourceFile.Exists">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.IPackagesSourceFile.ReadSources">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.IPackagesSourceFile.WriteSources(System.Collections.Generic.IEnumerable{System.Web.WebPages.Administration.PackageManager.WebPackageSource})">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.IWebProjectManager">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.IWebProjectManager.GetInstalledPackages(System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.IWebProjectManager.GetPackagesWithUpdates(System.String,System.Boolean)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.IWebProjectManager.GetRemotePackages(System.String,System.Boolean)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.IWebProjectManager.GetUpdate(NuGet.IPackage)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.IWebProjectManager.InstallPackage(NuGet.IPackage,System.AppDomain)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.IWebProjectManager.IsPackageInstalled(NuGet.IPackage)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.IWebProjectManager.LocalRepository">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.IWebProjectManager.SourceRepository">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.IWebProjectManager.UninstallPackage(NuGet.IPackage,System.Boolean)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.IWebProjectManager.UpdatePackage(NuGet.IPackage,System.AppDomain)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.packages__Layout_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages__Layout_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.packages__Layout_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages__Layout_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages__Layout_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.packages__Package_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages__Package_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.packages__Package_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages__Package_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages__Package_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.packages__PackageDetails_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages__PackageDetails_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.packages__PackageDetails_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages__PackageDetails_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages__PackageDetails_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.packages__pagestart_cshtml"></member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages__pagestart_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.packages__pagestart_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages__pagestart_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages__pagestart_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.packages_Default_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_Default_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.packages_Default_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_Default_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_Default_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.packages_Install_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_Install_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.packages_Install_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_Install_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_Install_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.packages_PackageSources_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_PackageSources_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.packages_PackageSources_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_PackageSources_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_PackageSources_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.packages_SourceFileInstructions_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_SourceFileInstructions_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.packages_SourceFileInstructions_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_SourceFileInstructions_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_SourceFileInstructions_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.packages_Uninstall_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_Uninstall_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.packages_Uninstall_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_Uninstall_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_Uninstall_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.packages_Update_cshtml">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_Update_cshtml.#ctor">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.packages_Update_cshtml.ApplicationInstance">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_Update_cshtml.Execute">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.packages_Update_cshtml.Href(System.String,System.Object[])">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.WebPackageSource">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebPackageSource.#ctor(System.String,System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebPackageSource.Equals(System.Object)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.WebPackageSource.FilterPreferredPackages">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebPackageSource.GetHashCode">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.WebProjectManager">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectManager.#ctor(System.String,System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectManager.CollapseVersions(System.Linq.IQueryable{NuGet.IPackage})">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectManager.GetInstalledPackages(System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectManager.GetPackagesWithUpdates(System.String,System.Boolean)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectManager.GetRemotePackages(System.String,System.Boolean)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectManager.GetUpdate(NuGet.IPackage)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectManager.InstallPackage(NuGet.IPackage,System.AppDomain)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectManager.IsPackageInstalled(NuGet.IPackage)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.WebProjectManager.LocalRepository">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.WebProjectManager.SourceRepository">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectManager.UninstallPackage(NuGet.IPackage,System.Boolean)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectManager.UpdatePackage(NuGet.IPackage,System.AppDomain)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="T:System.Web.WebPages.Administration.PackageManager.WebProjectSystem">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectSystem.#ctor(System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectSystem.AddFrameworkReference(System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectSystem.AddReference(System.String,System.IO.Stream)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectSystem.GetDirectories(System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectSystem.GetPropertyValue(System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectSystem.GetReferencePath(System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectSystem.IsSupportedFile(System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.WebProjectSystem.ProjectName">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectSystem.ReferenceExists(System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectSystem.RemoveReference(System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="M:System.Web.WebPages.Administration.PackageManager.WebProjectSystem.ResolvePath(System.String)">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+    <member name="P:System.Web.WebPages.Administration.PackageManager.WebProjectSystem.TargetFramework">
+      <summary>This type/member supports the .NET Framework infrastructure and is not intended to be used directly from your code.</summary>
+    </member>
+  </members>
+</doc>
