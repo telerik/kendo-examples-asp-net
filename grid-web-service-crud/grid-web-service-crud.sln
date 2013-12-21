@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "grid-web-service-crud", ".", "{961B8E88-51D0-47C2-9273-730C26C732EE}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/grid-web-service-crud"
+		Debug.AspNetCompiler.PhysicalPath = "..\grid-web-service-crud\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\grid-web-service-crud\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/grid-web-service-crud"
+		Release.AspNetCompiler.PhysicalPath = "..\grid-web-service-crud\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\grid-web-service-crud\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61151"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{961B8E88-51D0-47C2-9273-730C26C732EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{961B8E88-51D0-47C2-9273-730C26C732EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

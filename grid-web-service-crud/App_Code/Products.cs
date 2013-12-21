@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Script.Services;
 using System.Web.Services;
 using NorthwindModel;
+using Kendo.DynamicLinq;
 
 /// <summary>
 /// Sample ASP.NET service which performs CRUD (Create Read Update Destroy) operations over the Products table from the Northwind database. 
