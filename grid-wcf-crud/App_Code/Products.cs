@@ -7,6 +7,7 @@ using System.ServiceModel.Web;
 using NorthwindModel;
 using System.Runtime.Serialization;
 using System.IO;
+using Kendo.DynamicLinq;
 
 [ServiceContract(Namespace = "")]
 [ServiceBehavior(IncludeExceptionDetailInFaults = true)] 
