@@ -3,6 +3,7 @@ using System.Linq;
 using System.Web.Services;
 using NorthwindModel;
 using System.Data;
+using Kendo.DynamicLinq;
 
 public partial class _Default : System.Web.UI.Page
 {

@@ -8,15 +8,15 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Data.EntityClient;
-using System.ComponentModel;
-using System.Xml.Serialization;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
-
 namespace NorthwindModel
 {
     #region Contexts
@@ -82,6 +82,7 @@ namespace NorthwindModel
         private ObjectSet<Product> _Products;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -93,11 +94,11 @@ namespace NorthwindModel
         }
 
         #endregion
+
     }
-    
 
     #endregion
-    
+
     #region Entities
     
     /// <summary>
@@ -126,6 +127,7 @@ namespace NorthwindModel
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -324,9 +326,11 @@ namespace NorthwindModel
         partial void OnDiscontinuedChanged();
 
         #endregion
+
     
     }
 
     #endregion
+
     
 }
