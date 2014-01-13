@@ -1,4 +1,4 @@
-﻿This sample show a simple OData endpoint using ASP.NET Web API.
+﻿This sample shows a Kendo Grid using simple OData endpoints via ASP.NET Web API to perform CRUD operations.
 
 For more information about this sample, see:
 
