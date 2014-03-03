@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+
+    <link href="http://cdn.kendostatic.com/2013.3.1324/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <script src="http://cdn.kendostatic.com/2013.3.1324/js/kendo.mobile.min.js"></script>
+</head>
+<body>
+    <div data-role="view" id="product-list" data-title="Products List">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+                <a data-align="right" data-role="button" class="nav-button" data-click="insert">Insert</a>
+            </div>
+        </header>
+        <ul id="listview" data-role="listview" data-source="products" data-template="template" data-click="edit"></ul>
+        <script id="template" type="text/x-kendo-template">
+          <a> #=ProductName# </a>
+        </script>
+    </div>
+
+    <div data-role="view" id="product-edit" data-show="detailShow">
+        <header data-role="header">
+            <div data-role="navbar">
+                <a class="nav-button" data-align="left" data-role="backbutton" id="cancel" data-click="cancel">Cancel</a>
+                <span data-role="view-title">Details</span>
+                <a class="nav-button" data-align="right" data-role="button" id="done" data-click="done">Done</a>
+            </div>
+        </header>
+        <form>
+            <ul data-role="listview" data-style="inset" onclick="">
+                <li>
+                    <label>Product Name
+                        <input type="text" data-bind="value: ProductName"/>
+                    </label>
+                </li>
+                <li>
+                    Discontinued
+                    <input type="checkbox" data-role="switch" data-bind="checked: Discontinued" />
+                </li>
+                <li>
+                    <label>Unit Price
+                        <input type="number" data-bind="value: UnitPrice"/>
+                    </label>
+                </li>
+            </ul>
+            <button data-role="button" id="delete" data-click="destroy">Delete</button>
+        </form>
+    </div>
+    <script>
+        var products = new kendo.data.DataSource({
+            transport: {
+                create: {
+                    url: "Products.svc/Create", //specify the URL which should create new records. This is the Create method of the Products.svc service.
+                    contentType: "application/json; charset=utf-8", // tells the web service to serialize JSON
+                    type: "POST" //use HTTP POST request
+                },
+                read: {
+                    url: "Products.svc/Read", //specify the URL which data should return the records. This is the Read method of the Products.svc service.
+                    contentType: "application/json; charset=utf-8", // tells the web service to serialize JSON
+                    type: "POST" //use HTTP POST request
+                },
+                update: {
+                    url: "Products.svc/Update", //specify the URL from which should update the records. This is the Update method of the Products.svc service.
+                    contentType: "application/json; charset=utf-8", // tells the web service to serialize JSON
+                    type: "POST" //use HTTP POST request
+                },
+                destroy: {
+                    url: "Products.svc/Destroy", //specify the URL which should destroy records. This is the Destroy method of the Products.svc service.
+                    contentType: "application/json; charset=utf-8", // tells the web service to serialize JSON
+                    type: "POST" //use HTTP POST request
+                },
+                parameterMap: function (data, type) {
+                    if (type != "read") {
+                        return JSON.stringify({ product: data });
+                    }
+                }
+            },
+            schema: {
+                data: "d",
+                model: {
+                    id: "ProductID",
+                    fields: {
+                        ProductID: { type: "number" },
+                        ProductName: { type: "string" },
+                        Discontinued: { type: "boolean" },
+                        UnitPrice: { type: "number" }
+                    }
+                }
+            }
+        });
+        // Invoked when the user taps a list view item
+        function edit(e) {
+            application.navigate("#product-edit?uid=" + e.dataItem.uid);
+        }
+        // Invoked when the user taps the "Insert" button
+        function insert() {
+            var product = products.add({});
+
+            application.navigate("#product-edit?uid=" + product.uid);
+        }
+        // Invoked when the user taps the "Delete" button in the edit view
+        function destroy() {
+            var view = application.view();
+
+            var product = products.getByUid(view.params.uid);
+
+            if (product) {
+                products.remove(product);
+
+                sync();
+            }
+        }
+        // Invoked when the edit view is displayed
+        function detailShow() {
+            var view = this;
+
+            var product = products.getByUid(view.params.uid);
+
+            kendo.bind(view.element, product, kendo.mobile.ui);
+        }
+        // Helper method which syncs the changes (sends them to the WCF service)
+        function sync() {
+            products.one("sync", function () {
+                application.hideLoading();
+
+                application.navigate("#:back");
+            });
+
+            application.showLoading();
+
+            products.sync();
+        }
+        // Invoked when the user taps the "Done" button
+        function done() {
+            sync();
+        }
+        // Invoked when the user taps the "Cancel" button
+        function cancel() {
+            products.cancelChanges();
+        }
+
+        var application = new kendo.mobile.Application();
+    </script>
+</body>
+</html>
