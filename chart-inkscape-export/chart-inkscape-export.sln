@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chart-inkscape-export", "chart-inkscape-export.csproj", "{918CB261-1E9E-4926-92F9-77AEC0EDAD74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{32864093-5FC1-4552-8FB6-8476CCF071D2}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{918CB261-1E9E-4926-92F9-77AEC0EDAD74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918CB261-1E9E-4926-92F9-77AEC0EDAD74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{918CB261-1E9E-4926-92F9-77AEC0EDAD74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{918CB261-1E9E-4926-92F9-77AEC0EDAD74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

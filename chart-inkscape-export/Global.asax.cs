@@ -2,39 +2,33 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+using System.Web.Optimization;
 using System.Web.Routing;
+using System.Web.Security;
+using chart_inkscape_export;
 
-namespace KendoChartExport
+namespace chart_inkscape_export
 {
-    // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
-    // visit http://go.microsoft.com/?LinkId=9394801
-
-    public class MvcApplication : System.Web.HttpApplication
+    public class Global : HttpApplication
     {
-        public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+        void Application_Start(object sender, EventArgs e)
         {
-            filters.Add(new HandleErrorAttribute());
+            // Code that runs on application startup
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            AuthConfig.RegisterOpenAuth();
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
 
-        public static void RegisterRoutes(RouteCollection routes)
+        void Application_End(object sender, EventArgs e)
         {
-            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute(
-                "Default", // Route name
-                "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
-            );
+            //  Code that runs on application shutdown
 
         }
 
-        protected void Application_Start()
+        void Application_Error(object sender, EventArgs e)
         {
-            AreaRegistration.RegisterAllAreas();
+            // Code that runs when an unhandled error occurs
 
-            RegisterGlobalFilters(GlobalFilters.Filters);
-            RegisterRoutes(RouteTable.Routes);
         }
     }
 }

@@ -6,5 +6,5 @@ http://inkscape.org/download/?lang=en
 Inkscape tutorial with full list of export options is available at:
 http://tavmjong.free.fr/INKSCAPE/MANUAL/html/CommandLine-Export.html
 
-Note that ASP.NET or Inkscape are chosen just as an example.
+Note that ASP.NET and Inkscape are chosen just as an example.
 The same approach can be used for different server platforms and SVG processing software.
