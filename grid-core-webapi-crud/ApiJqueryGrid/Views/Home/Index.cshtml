@@ -1,0 +1,70 @@
+﻿<div id="grid"></div>
+<script>
+    $("#grid").kendoGrid({
+        columns: [
+            { "title": "Order ID", "width": "100px", "field": "OrderID" },
+            { "title": "Ship City", "width": "200px", "field": "ShipCity" },
+            { "title": "Ship Name", "width": "200px", "field": "ShipName" },
+            { "title": "Order Date", "width": "200px", "field": "OrderDate", format: "{0:dd/MM/yyyy}" },
+            { "title": "Category", "width": "200px", "field": "Category", editor: categoryDropDownList, template: "#=Category.CategoryName#" },
+            { command: ["edit", "destroy"], "width": "150px" }
+        ],
+        toolbar: ["create"],
+        groupable: true,
+        pageable: true,
+        sortable: true,
+        filterable: true,
+        editable: "inline",
+        dataSource: {
+            type: "webapi",
+            transport: {
+                read: {
+                    url: "/api/Grid/Read"
+                },
+                update: {
+                    url: "/api/Grid/Update"
+                },
+                create: {
+                    url: "/api/Grid/Create"
+                },
+                destroy: {
+                    url: "/api/Grid/Destroy"
+                }
+            },
+            pageSize: 20,
+            serverPaging: true,
+            serverSorting: true,
+            serverFiltering: true,
+            serverGrouping: true,
+            serverAggregates: true,
+            schema: {
+                data: "Data",
+                total: "Total",
+                errors: "Errors",
+                model: {
+                    id: "OrderID",
+                    fields: {
+                        OrderID: { type: "number", editable: false },
+                        ShipCity: { type: "string" },
+                        ShipName: { type: "string" },
+                        OrderDate: { type: "date" },
+                        Category: { defaultValue: { CategoryID: 1, CategoryName: "En Route" } },
+                    }
+                }
+            }
+        }
+    });
+
+    function categoryDropDownList(container, options) {
+        $('<input required name="' + options.field + '"/>')
+            .appendTo(container)
+            .kendoDropDownList({
+                dataTextField: "CategoryName",
+                dataValueField: "CategoryID",
+                dataSource: {
+                    data: [{ CategoryID: 1, CategoryName: "En Route" }, { CategoryID: 2, CategoryName: "Delivered" }]
+                }
+            });
+    }
+</script>
+

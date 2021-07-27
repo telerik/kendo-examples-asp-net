@@ -1,0 +1,78 @@
+﻿<div ng-app="app" ng-controller="controller">
+    <div kendo-grid k-options="gridOptions" k-data-source="gridDataSource"></div>
+</div>
+<script>
+    var app = angular.module("app", ["kendo.directives"]);
+    app.controller("controller", ["$http", "$scope", function ($http, $scope) {
+        $scope.categoryDataSource = new kendo.data.DataSource({
+            data: [{ CategoryID: 1, CategoryName: "En Route" }, { CategoryID: 2, CategoryName: "Delivered" }]
+        });
+
+        $scope.categoryDropDownList = function (container, options) {
+            $('<input kendo-drop-down-list required k-data-text-field="\'CategoryName\'" k-data-value-field="\'CategoryID\'" k-data-source="categoryDataSource" data-bind="value:' + options.field + '"/>')
+                .appendTo(container);
+        };
+
+        $scope.gridOptions = {
+            columns: [
+                { "title": "Order ID", "width": "100px", "field": "OrderID" },
+                { "title": "Ship City", "width": "200px", "field": "ShipCity" },
+                { "title": "Ship Name", "width": "200px", "field": "ShipName" },
+                { "title": "Order Date", "width": "200px", "field": "OrderDate", format: "{0:dd/MM/yyyy}" },
+                { "title": "Category", "width": "200px", "field": "Category", editor: $scope.categoryDropDownList, template: "#=Category.CategoryName#" },
+                { command: ["edit", "destroy"], "width": "150px" }
+            ],
+            toolbar: ["create"],
+            groupable: true,
+            pageable: true,
+            sortable: true,
+            filterable: true,
+            editable: "inline"
+        };
+
+        $scope.model = {
+            id: "OrderID",
+            fields: {
+                OrderID: { type: "number", editable: false },
+                ShipCity: { type: "string" },
+                ShipName: { type: "string" },
+                OrderDate: { type: "date" },
+                Category: { defaultValue: { CategoryID: 1, CategoryName: "En Route" } },
+            }
+        };
+
+        $scope.gridDataSource = {
+            transport: {
+                read: {
+                    url: "/api/Grid/Read",
+                    type: "GET"
+                },
+                update: {
+                    url: "/api/Grid/Update",
+                    type: "PUT"
+                },
+                create: {
+                    url: "/api/Grid/Create",
+                    type: "POST"
+                },
+                destroy: {
+                    url: "/api/Grid/Destroy",
+                    type: "DELETE"
+                },
+                parameterMap: function (data, operation) {
+                    var webapi = new kendo.data.transports.webapi({ prefix: "" });
+                    var params = webapi.parameterMap(data);
+
+                    return params;
+                }
+            },
+            pageSize: 20,
+            serverPaging: true,
+            serverSorting: true,
+            serverFiltering: true,
+            serverGrouping: true,
+            serverAggregates: true,
+            schema: { data: "Data", total: "Total", errors: "Errors", model: $scope.model }
+        };
+    }]);
+</script>
